@@ -14,7 +14,7 @@ services:
 # build and deploy configurations
 build:
   - name: Prepare ML Model
-    command: python app.py
+    command: python dynamic_pricing.py
 
 # additional files and directories to include in the deployment
 files:
