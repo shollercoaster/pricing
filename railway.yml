@@ -1,0 +1,21 @@
+
+# environment variables 
+env:
+  FLASK_ENV: development  
+  SECRET_KEY: "secret-key"
+
+# the services the project uses
+services:
+  - name: web
+    type: python
+    command: python app.py
+    env: development
+
+# build and deploy configurations
+build:
+  - name: Prepare ML Model
+    command: python app.py
+
+# additional files and directories to include in the deployment
+files:
+  - Pop_Data.csv
